@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body{
     font: 17px/1 'LatoRegular', sans-serif;
@@ -23,8 +24,11 @@ a {
     transition: all 0.2s;
     color: #fff;
 }
-a:hover{
+a:hover,
+a:focus,
+a:active{
     color: #f8c520;
+    background: transparent;
 }
 
 .clearfix:before,
@@ -491,6 +495,7 @@ nav{
 }
 .s_item-content{
     text-align: center;
+    margin-top: 29px;
 }
 .s_item-text{
     line-height: 2.2;
@@ -511,7 +516,7 @@ nav{
 }
 .fa-quote-right{
     position: absolute;
-    right: 81px;
+    right: 75px;
     bottom: -38px;
 }
 .s_item-name h2 {
@@ -552,6 +557,52 @@ nav{
     top: inherit;
     right: 0;
 }
+
+/*  */
+.testimonials-slider{
+    margin-top: 50px;
+}
+.current {
+    filter: drop-shadow(2px 2px 1px gold) drop-shadow(-2px 2px 1px gold) drop-shadow(2px -2px 1px gold) drop-shadow(-2px -2px 1px gold);
+    -webkit-filter: drop-shadow(2px 2px 1px gold) drop-shadow(-2px 2px 1px gold) drop-shadow(2px -2px 1px gold) drop-shadow(-2px -2px 1px gold);
+}
+
+/*.back-current {*/
+    /*filter: drop-shadow(2px 2px 0 #ccc)*/
+        /*drop-shadow(-2px 2px 0 #ccc)*/
+        /*drop-shadow(2px -2px 0 #ccc)*/
+        /*drop-shadow(-2px -2px 0 #ccc);*/
+    /*-webkit-filter: drop-shadow(2px 2px 0 #ccc)*/
+        /*drop-shadow(-2px 2px 0 #ccc)*/
+        /*drop-shadow(2px -2px 0 #ccc)*/
+        /*drop-shadow(-2px -2px 0 #ccc);*/
+/*}*/
+
+.back-current img {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+/*.back-last {*/
+    /*filter: drop-shadow(2px 2px 0 #ccc)*/
+        /*drop-shadow(-2px 2px 0 #ccc)*/
+        /*drop-shadow(2px -2px 0 #ccc)*/
+        /*drop-shadow(-2px -2px 0 #ccc);*/
+    /*-webkit-filter: drop-shadow(2px 2px 0 #ccc)*/
+        /*drop-shadow(-2px 2px 0 #ccc)*/
+        /*drop-shadow(2px -2px 0 #ccc)*/
+        /*drop-shadow(-2px -2px 0 #ccc);*/
+/*}*/
+
+.back-last img {
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+/*   */
+
+
+
 /*  FOOTER  */
 .footer-bg{
     background: url("../images/footer-bg.jpg") center/cover no-repeat;
@@ -632,6 +683,8 @@ nav{
 /* PAGE TEMPLATE  */
 .b-block{
     padding: 50px 0;
+    position: relative;
+    z-index: 2;
 }
 .b-block_img img{
     width: 100%;
@@ -640,6 +693,9 @@ nav{
 .b-block_text{
     margin-top: 20px;
     line-height: 2.2;
+}
+.current-page a{
+    color: #f8c520;
 }
 /*   */
 
@@ -936,5 +992,12 @@ nav{
     .icon-increase{
         width: 35px;
         height: 35px;
+    }
+    .slider-content {
+        padding: 50px 0;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        width: 204px;
     }
 }
