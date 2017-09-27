@@ -496,29 +496,34 @@ nav{
 }
 .s_item-content{
     text-align: center;
-    margin-top: 29px;
 }
 .s_item-text{
     line-height: 2.2;
     position: relative;
 }
 .s_item-text p{
-    width: 85%;
+    width: 90%;
     margin: 0 auto;
+    position: relative;
 }
-.icon-quote{
+.s_item-text p:before,
+.s_item-text p:after{
+    display: inline-block;
+    font: normal normal normal 4em/1 FontAwesome;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     color: #e5e5e5;
-    font-size: 40px;
 }
-.fa-quote-left{
-    position: absolute;
-    left: 30px;
-    top: -32px;
+.s_item-text p:before{
+    content:"\f10d";
+    margin-right: 10px;
 }
-.fa-quote-right{
+.s_item-text p:after{
+    content: "\f10e";
     position: absolute;
-    right: 75px;
-    bottom: -38px;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 .s_item-name h2 {
     font: 500 22px 'ProximaNovaBold', sans-serif;
@@ -599,10 +604,6 @@ nav{
     opacity: 0.2;
     filter: alpha(opacity=20);
 }
-
-/*   */
-
-
 
 /*  FOOTER  */
 .footer-bg{
@@ -902,6 +903,24 @@ nav{
         font-size: 40px;
     }
 }
+@media screen and (max-width: 640px){
+    .back-current,
+    .back-last{
+        opacity: 0;
+        display: none !important;
+    }
+    .right{
+        right: 0 !important;
+        left: 380px;
+    }
+    .left{
+        left: 120px !important;
+    }
+    .people-slider,
+    .people-slider ul{
+        width: 100% !important;
+    }
+}
 @media screen and (max-width: 520px){
     .logo{
         width: 40%;
@@ -974,6 +993,10 @@ nav{
     }
     .project-content{
         padding: 0 5px;
+    }
+    .s_item-text p:before,
+    .s_item-text p:after{
+        font-size: 3em;
     }
 }
 @media screen and (max-width: 390px){
