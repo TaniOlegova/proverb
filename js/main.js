@@ -13,32 +13,32 @@ $(document).ready(function(){
     $('.mobile-menu i').on('click', function () {
         $('.navigation-menu').stop().slideToggle();
     });
+});
 
-    $('.people-slider').carousel({
+$('.people-slider').carousel({
 
-        // the number of images to display
-        num: 5,
 
-        // max width of the active image
-        maxWidth: 180,
+    // the number of images to display
+    num: 5,
 
-        // min width of the active image
-        maxHeight: 200,
+    // max width of the active image
+    maxWidth: 180,
 
-        // enable auto play
-        autoPlay: false,
+    // min width of the active image
+    maxHeight: 200,
 
-        // autoplay interval
-        showTime: 1000,
+    // enable auto play
+    autoPlay: false,
 
-        // animation speed
-        animationTime: 300,
+    // autoplay interval
+    showTime: 1000,
 
-        // 0.0 - 1.0
-        scale: 0.8,
+    // animation speed
+    animationTime: 300,
 
-        // the distance between images
-        distance: 85
-    });
+    // 0.0 - 1.0
+    scale: 0.8,
 
+    // the distance between images
+    distance: 85
 });
